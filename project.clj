@@ -1,4 +1,4 @@
-(defproject typographer "0.1.0-SNAPSHOT"
+(defproject typographer "1.0"
   :description "Converts standard ASCII punctuation into typographic smart characters."
   :url "https://github.com/akivaschoen/typographer"
   :license {:name "Eclipse Public License"
