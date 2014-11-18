@@ -5,7 +5,7 @@ This library converts standard ASCII punctuation into typographic smart characte
 ## Usage
 
 ```clojure
-[typographer "1.0"]
+[typographer "1.0.0"]
 ```
 
 To transform the punctuation in a string, pass it Typographer's 'smarten' function. Easy.
