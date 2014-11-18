@@ -11,7 +11,7 @@
     {:pattern #"^\"(?=[!\"#\$\%\'()*+,\-.\/:;<=>?\@\[\\\\\]\^_`{|}~]\B)"  :replace "”"}
 
     ; For handling double sets of quotes. For example:
-    ;   He said, "'Quoted' words in a larger quote.""
+    ;   He said, "'Quoted' words in a larger quote."
     {:pattern #"\"'(?=\w)"                                                :replace "“‘"}
     {:pattern #"'\"(?=\w)"                                                :replace "‘“"}
 
