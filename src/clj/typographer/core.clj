@@ -46,9 +46,11 @@
   "Takes a string and replaces all relevant instances of standard ASCII punctuation with
   the typographer's fancy versions."
   [input]
-  (loop [patterns patterns output input]
-    (if-not (seq patterns)
-      output
-      (let [pattern (first patterns)]
-        (recur (rest patterns)
-               (string/replace output (:pattern pattern) (:replace pattern)))))))
+  (if-not (string? input)
+    input
+    (loop [patterns patterns output input]
+      (if-not (seq patterns)
+        output
+        (let [pattern (first patterns)]
+          (recur (rest patterns)
+                 (string/replace output (:pattern pattern) (:replace pattern)))))))) 
