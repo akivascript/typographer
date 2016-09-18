@@ -10,13 +10,25 @@
     {:pattern #"^'(?=[!\"#\$\%\'()*+,\-.\/:;<=>?\@\[\\\\\]\^_`{|}~]\B)"   :replace "’"}
     {:pattern #"^\"(?=[!\"#\$\%\'()*+,\-.\/:;<=>?\@\[\\\\\]\^_`{|}~]\B)"  :replace "”"}
 
+
+    ; Proclitic contractions.
+    {:pattern #"'([Tt])(would|were|is|was|will)"
+     :replace "’$1$2"}
+
+    {:pattern #"'([Tt])(ain|warn)'t"
+     :replace "’$1$2’t"}
+
+
+    ; For decade abbreviations such as 'the '80s'.
+    {:pattern #"'(?=\d\d['s])"
+     :replace "’"}
+
+
     ; For handling double sets of quotes. For example:
     ;   He said, "'Quoted' words in a larger quote."
     {:pattern #"\"'(?=\w)"                                                :replace "“‘"}
     {:pattern #"'\"(?=\w)"                                                :replace "‘“"}
 
-    ; For decade abbreviations such as 'the '80s'.
-    {:pattern #"'(?=\d\ds)"                                               :replace "’"}
 
     ; Gets most opening single quotes
     {:pattern #"(\s|&nbsp;|--|&[mn]dash;|'–|—'|&#x201[34];)'(?=\w)"       :replace "$1‘"}
