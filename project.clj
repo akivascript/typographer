@@ -14,5 +14,5 @@
                         :optimizations :advanced
                         :pretty-print false}}}}
   :profiles
-  {:dev {:dependencies [[org.clojure/clojurescript "0.0-2913"]]
-         :plugins [[lein-cljsbuild "1.0.5"]]}})
+  {:dev {:dependencies [[org.clojure/clojurescript "1.9.229"]]
+         :plugins [[lein-cljsbuild "1.1.4"]]}})
